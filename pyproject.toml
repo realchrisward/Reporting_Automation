@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "reporting_automation"
+dynamic = [
+  "version",
+]
+dependencies = [
+    "google-api-core>=2.25.1",
+    "google-api-python-client>=2.173.0",
+    "google-auth-oauthlib>=1.2.2",
+]
+
+requires-python = ">= 3.12"
+maintainers = [
+  {name = "Chris Ward", email = "ward.chris.s@gmail.com"}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["email","automation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python"
+]
+
+
+[project.urls]
+Repository = "https://github.com/realchrisward/Reporting_Automation"
+
+[tool.hatch.build.targets.wheel]
+      packages = ["src/reporting_automation"]
+
+[tool.hatch.version]
+path = "src/reporting_automation/reporting_automation.py"
