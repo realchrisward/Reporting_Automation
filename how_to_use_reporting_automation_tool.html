@@ -1,0 +1,11 @@
+<h1>Chris Ward Lab's Reporting Automation - How to use it</h1>
+<h2>Request Access</h2>
+access to the tool can be requested from ward.chris.s@gmail.com
+<h2>Get the code</h2>
+clone the github repository, or install the python package via pip
+<h2>Use the tool</h2>
+<p>place the initial credentials.json file into the local working directory
+<p>use the get_gmail_credentials() function to trigger the login prompt
+<p>sign in with the google account that you want to use - a token.json should be created
+<p>if being used on a automated system for emailing (i.e. windows task scheduler, linux chronjobs) the credentials should be refreshed before expiration (i.e. run get_gmail_credentials() once a day)
+<p>make calls to the send_message() function for automated emailing
